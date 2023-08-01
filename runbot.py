@@ -16,9 +16,8 @@ class Testcase(unittest.TestCase):
         self.driver.get('https://chat.zalo.me/')
         self.driver.maximize_window()
         time.sleep(10)
-        urls= ['0966439241']
         # Nhập tên cột và số lượng muốn chạy bot:
-        # urls= file_mau['SĐT 10 SỐ'][681:701]
+        urls= file_mau['SĐT 10 SỐ'][681:701]
         for i in urls:
             Base(self.driver).click_element(('xpath','//div[@data-translate-title="STR_CONTACT_ADD_FRIEND"]'))
 

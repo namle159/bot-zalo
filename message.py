@@ -6,13 +6,13 @@ def messageZalo(self):
     try:
         gioi_tinh= Base(self.driver).getElement(('xpath','//span[contains(@data-translate-inner, "STR_GENDER")]'))
         if gioi_tinh.text == 'Nữ':
-            danh_xung= 'Chị'
+            danh_xung= 'chị'
         elif gioi_tinh.text == 'Nam':
-            danh_xung= 'Anh'
+            danh_xung= 'anh'
         else:
-            danh_xung= 'Anh/Chị'
+            danh_xung= 'anh/chị'
     except:
-        danh_xung= 'Anh/Chị'
+        danh_xung= 'anh/chị'
     time.sleep(1)
     Base(self.driver).click_element(('xpath','//div[@icon="close f16"]'))
     ten_nguoi_nhan= Base(self.driver).getElement(('xpath','//div-b18[@class="header-title flx flx-al-c flex-1"]'))
@@ -33,31 +33,4 @@ def messageZalo(self):
     tinnhan4.send_keys(f'Em hy vọng {danh_xung} sẽ có trải nghiệm tốt với nội dung này và rất mong được kết nối với {danh_xung}')
     time.sleep(2)
     tinnhan4.send_keys(Keys.ENTER)
-    # tinnhan5=Base(self.driver).getElement(('xpath','//div[@id="input_line_4"]'))
-    # tinnhan5.send_keys('Trân trọng cảm ơn!')
-    # tinnhan5.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan6=Base(self.driver).getElement(('xpath','//div[@id="input_line_5"]'))
-    # tinnhan6.send_keys('- Khách hàng tiềm năng đang quan tâm đến khía cạnh nào của sự kiện BLACKPINK?”...')
-    # tinnhan6.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan7=Base(self.driver).getElement(('xpath','//div[@id="input_line_6"]'))
-    # tinnhan7.send_keys('- Tất cả sẽ có trong “Đêm Nhạc BLACKPINK - Người Việt Ủng Hộ Nhiều Hơn Hay Phản Đối Nhiều Hơn”.')
-    # tinnhan7.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan8=Base(self.driver).getElement(('xpath','//div[@id="input_line_7"]'))
-    # tinnhan8.send_keys('- Socialyze Asia mang đến cho bạn bức tranh tổng quan xoay quanh sự kiện này một cách nhanh chóng, để kịp thời đưa ra các quyết định đúng đắn.')
-    # tinnhan8.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan9=Base(self.driver).getElement(('xpath','//div[@id="input_line_8"]'))
-    # tinnhan9.send_keys('- Để không bỏ lỡ bất kỳ thông tin mới nào liên quan đến [sản phẩm/dịch vụ] của Socialyze Asia, chúng tôi sẽ gửi đến bạn các thông tin về [sản phẩm/dịch vụ] thông qua thư điện tử.')
-    # tinnhan9.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan10=Base(self.driver).getElemaent(('xpath','//div[@id="input_line_9"]'))
-    # tinnhan10.send_keys('- Nếu bạn có bất kỳ câu hỏi hoặc thắc mắc nào, vui lòng liên hệ với chúng tôi qua số điện thoại (+84) 0903983811 hoặc Email: info@socialyze.asia')
-    # tinnhan10.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan11=Base(self.driver).getElement(('xpath','//div[@id="input_line_10"]'))
-    # tinnhan11.send_keys('--- ĐĂNG KÝ NGAYa ĐỂ NHẬN MIỄN PHÍ BÁO CÁO ĐẦY ĐỦ ---')
-    # tinnhan11.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan12=Base(self.driver).getElement(('xpath','//div[@id="input_line_11"]'))
-    # tinnhan12.send_keys('Chân thành cảm ơn bạn đã tin tưởng và sử dụng sản phẩm/dịch vụ của Socialyze Asia.')
-    # tinnhan12.send_keys(Keys.SHIFT + Keys.ENTER)
-    # tinnhan13=Base(self.driver).getElement(('xpa368525951th','//div[@id="input_line_12"]'))
-    # tinnhan13.send_keys('Trân trọng,')
-    # Base(self.driver).click_element(('xpath','//div[@data-translate-inner="STR_SEND"]'))
     return messageZalo
